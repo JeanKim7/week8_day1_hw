@@ -1449,9 +1449,48 @@
         {
             "language": "typescript",
             "source": [
-                "//Answer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                "//Answer\n\ntype CTStudent= {\n    id: string,\n    name: string,\n    age: number,\n    isTired: boolean,\n    projectsCompleted: [...string[]],\n    pet?: string\n}\n\nlet student1:CTStudent = {\n    id: 'GMK435&g62L00',\n    name: 'John Smith',\n    age: 24,\n    isTired: true,\n    projectsCompleted:[\"HTML Portfolio\", \"Fakebook\", \"Pokemon API Project\", \"Weather Bug\"],\n    pet: 'dog'\n}\n\nlet student2:CTStudent= {\n    id: '6KGS%54GmlY76',\n    name: 'Jenny Hawthorne',\n    age: 28,\n    isTired: false,\n    projectsCompleted:[\"HTML Portfolio\"],\n}\n\nlet student3:CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Neo',\n    age: 57,\n    isTired: true,\n    projectsCompleted:[\"Matrix\",\"Biological Interface Program\"],\n    pet:'cat'\n}\n\nconsole.log(student1);\nconsole.log(student2);\nconsole.log(student3);\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  id: 'GMK435&g62L00',",
+                                "  name: 'John Smith',",
+                                "  age: 24,",
+                                "  isTired: true,",
+                                "  projectsCompleted: [",
+                                "    'HTML Portfolio',",
+                                "    'Fakebook',",
+                                "    'Pokemon API Project',",
+                                "    'Weather Bug'",
+                                "  ],",
+                                "  pet: 'dog'",
+                                "}",
+                                "{",
+                                "  id: '6KGS%54GmlY76',",
+                                "  name: 'Jenny Hawthorne',",
+                                "  age: 28,",
+                                "  isTired: false,",
+                                "  projectsCompleted: [ 'HTML Portfolio' ]",
+                                "}",
+                                "{",
+                                "  id: '6KGS%54GmlY76',",
+                                "  name: 'Neo',",
+                                "  age: 57,",
+                                "  isTired: true,",
+                                "  projectsCompleted: [ 'Matrix', 'Biological Interface Program' ],",
+                                "  pet: 'cat'",
+                                "}",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -1470,9 +1509,20 @@
         {
             "language": "typescript",
             "source": [
-                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer"
+                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\n\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer\n\nfunction iceFruit(object:Fruit): string{\n    if (object === null) {\n        return \"You ate my fruit already\"\n    } else {\n        return object.color\n    }\n}\n\niceFruit(eaten)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'You ate my fruit already'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -1491,9 +1541,21 @@
         {
             "language": "typescript",
             "source": [
-                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\n"
+                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\ntype EBook = Book & DigitalBook\n\nlet kindle:EBook = {\n    isbn:\"0000\",\n    title:\"kindle\",\n    author:\"me\",\n    fileType:\".json\"\n}\n\nconsole.log(kindle)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{ isbn: '0000', title: 'kindle', author: 'me', fileType: '.json' }",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
@@ -1512,9 +1574,30 @@
         {
             "language": "typescript",
             "source": [
-                "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                "enum Category {Shirts, Shoes, Pants, Hats}\n\ntype ShopItem = {\n    readonly id: number,\n    price: number,\n    description: string,\n    color?: string,\n    category: Category\n    keywords: [...string[]]\n}\n\nlet jeans: ShopItem ={\n    id:1,\n    price:50.00,\n    description: \"blue and tough\",\n    category: Category.Pants,\n    keywords: ['tough', 'blue','etc']\n}\n\n\njeans\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{",
+                                "  id: \u001b[33m1\u001b[39m,",
+                                "  price: \u001b[33m50\u001b[39m,",
+                                "  description: \u001b[32m'blue and tough'\u001b[39m,",
+                                "  category: \u001b[33m2\u001b[39m,",
+                                "  keywords: [",
+                                "    \u001b[32m'tough'\u001b[39m,",
+                                "    \u001b[32m'blue'\u001b[39m,",
+                                "    \u001b[32m'etc'\u001b[39m",
+                                "  ]",
+                                "}"
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
