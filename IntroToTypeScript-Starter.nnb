@@ -1509,7 +1509,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\n\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer\n\nfunction iceFruit(object:Fruit): string{\n    if (object === null) {\n        return \"You ate my fruit already\"\n    } else {\n        return object.color\n    }\n}\n\niceFruit(eaten)"
+                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\n\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer\n\nfunction iceFruit(object:Fruit|null): string{\n    if (object === null) {\n        return \"You ate my fruit already\"\n    } else {\n        return object.color\n    }\n}\n\niceFruit(eaten)"
             ],
             "outputs": [
                 {
