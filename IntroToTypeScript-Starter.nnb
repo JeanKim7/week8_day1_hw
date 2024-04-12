@@ -1541,7 +1541,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\ntype EBook = Book & DigitalBook\n\nlet kindle:EBook = {\n    isbn:\"0000\",\n    title:\"kindle\",\n    author:\"me\",\n    fileType:\".json\"\n}\n\nconsole.log(kindle)"
+                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\ntype EBook = Book | DigitalBook\n\nlet kindle:EBook = {\n    isbn:\"1111\",\n    title:\"hello\",\n    author: \"me\"\n}\n\nconsole.log(kindle)"
             ],
             "outputs": [
                 {
@@ -1549,7 +1549,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "{ isbn: '0000', title: 'kindle', author: 'me', fileType: '.json' }",
+                                "{ isbn: '1111', title: 'hello', author: 'me' }",
                                 ""
                             ]
                         }
